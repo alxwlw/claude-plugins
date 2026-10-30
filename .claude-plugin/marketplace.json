@@ -1,0 +1,15 @@
+{
+  "name": "alxwlw-plugins",
+  "owner": {
+    "name": "alxwlw"
+  },
+  "description": "Anthropic plugins customized for our Plane workspaces (LIQ, YEVA).",
+  "plugins": [
+    {
+      "name": "engineering",
+      "displayName": "Engineering (Plane)",
+      "source": "./plugins/engineering",
+      "description": "Anthropic's Engineering plugin set up for Plane: standups, code review, architecture decisions, debugging, deploy checklists and incident response across the LIQ and YEVA workspaces."
+    }
+  ]
+}

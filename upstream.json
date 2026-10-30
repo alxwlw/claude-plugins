@@ -1,0 +1,8 @@
+{
+  "engineering": {
+    "repo": "https://github.com/anthropics/knowledge-work-plugins",
+    "path": "engineering",
+    "commit": "2574e29377c7173d0cecffef29a6ecbd7f8ccb5d",
+    "version": "1.2.0"
+  }
+}
