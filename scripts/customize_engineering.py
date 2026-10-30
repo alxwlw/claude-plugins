@@ -136,10 +136,17 @@ m.pop("version", None)
 m["displayName"] = "Engineering (Plane)"
 p.write_text(json.dumps(m, indent=2, ensure_ascii=False) + "\n")
 
-# .mcp.json: drop the trackers replaced by Plane (Plane connectors are already connected to the account)
+# .mcp.json: replace the trackers with the two Plane connectors. The URLs must match the
+# account's custom connectors exactly, or claude.ai offers to add them as new connectors.
 p = root / ".mcp.json"
 cfg = json.loads(p.read_text())
 for k in ["linear", "asana", "pagerduty"]:
     cfg["mcpServers"].pop(k, None)
+servers = {
+    "Plane [LIQ]": {"type": "http", "url": "https://plane-mcp.liqu.si/http/mcp"},
+    "Plane [YEVA]": {"type": "http", "url": "https://plane-mcp.liqu.si/http/mcp?workspace=yeva-egn"},
+}
+servers.update(cfg["mcpServers"])
+cfg["mcpServers"] = servers
 p.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n")
 print("ok")

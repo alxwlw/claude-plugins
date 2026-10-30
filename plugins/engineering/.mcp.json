@@ -1,5 +1,13 @@
 {
   "mcpServers": {
+    "Plane [LIQ]": {
+      "type": "http",
+      "url": "https://plane-mcp.liqu.si/http/mcp"
+    },
+    "Plane [YEVA]": {
+      "type": "http",
+      "url": "https://plane-mcp.liqu.si/http/mcp?workspace=yeva-egn"
+    },
     "slack": {
       "type": "http",
       "url": "https://mcp.slack.com/mcp",
